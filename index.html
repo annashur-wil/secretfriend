@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Secret Santa Generator</title>
+        <title>Secret Friend Generator</title>
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
@@ -27,11 +27,11 @@
             }
 
             body {
-                background-image: url(assets/santa.png);
+                background-image: url(assets/presentkitten.jpeg);
                 background-position: bottom right;
                 background-repeat: no-repeat;
 
-                font-family: 'Comic Sans MS';
+                font-family: 'Jetbrains Mono';
             }
 
             .main {
@@ -54,7 +54,7 @@
             .instructions a {
                 text-decoration: none;
 
-                color: #0CB50C;
+                color: #b50c9f;
             }
 
             .input {
@@ -64,7 +64,7 @@
                 width: 100%;
                 flex: auto;
 
-                border: 10px solid #0CB50C;
+                border: 10px solid #b50c9f;
                 border-radius: 10px;
 
                 padding: 15px;
@@ -81,7 +81,7 @@
                 flex: none;
                 height: 100px;
 
-                border: 10px solid #0CB50C;
+                border: 10px solid #b50c9f;
                 border-radius: 10px;
 
                 font-family: inherit;
@@ -154,11 +154,11 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Secret Santa Generator</h1>
-                    <p>No signup, no email, no bullshit. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
+                    <h1><img src="assets/lemoncat.png" style="vertical-align: middle" /> Secret Friend Generator</h1>
+                    <p>Shur-Wilson Family Gift Generator for 2023. Had trouble finding a non-denominational tool, so Luis helped me make my own! Modified from a <a href="https://github.com/arcanis/secretsanta">open-source</a> tool.</p>
                     <p>In the most common case (no exclusion rules, pair each guest with another at random), enter the name of your guests one line at a time. Once done, press "generate" and you're all set: send the generated links to your guests (by mail, chat, whatever floats your boat) and their pairing will be revealed to them (and only them) once they open the link.</p>
                     <h2>Where does this tool come from?</h2>
-                    <p>I wanted to make a Secret Santa over Facebook without having to reveal to anyone my guests email addresses (so nothing that would require a backend). I also wanted not to know who was paired with me, so I had to find a way to somehow obfuscate the information. And being a developer, well, my first thought was "Let's AES it, for fun and profits!". Classic.</p>
+                    <p>I modified this tool from an open source project by https://arcanis.github.io/secretsanta/</p>
                 </div>
             </div>
 
@@ -172,21 +172,21 @@
 
         <script id="input-placeholder" type="text/placeholder">
             # You can add a user by adding a line
-            Santa
+            Anna
 
             # You can add some details if you want to, using parentheses after the name
-            Nicholas (the elf)
+            Luis (loves running)
 
             # You can prevent someone from being paired with someone else
-            Maël !Aurélie
-            Aurélie !Maël
+            Anna !Luis
+            Luis !Anna
 
             # You can also exclude someone from being paired with multiple people
-            # Careful: too many exclusion rules can make your secret santa less interesting!
-            Rudolph !Santa !Nicholas (the elf)
+            # Careful: too many exclusion rules can make your secret friend less interesting!
+            
 
             # You can also cheat a bit and force someone to be paired with another
-            Nicholas (the saint) =Nicholas (the elf)
+            Luis (loves running) =Anna (loves her cat)
 
             ...
         </script>
